@@ -33,4 +33,4 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 12
   },
-})
+});
