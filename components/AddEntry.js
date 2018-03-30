@@ -6,7 +6,13 @@ import {
     Platform,
     StyleSheet
 } from 'react-native';
-import { getMetricMetaInfo, timeToString, getDailyReminderValue } from '../utils/helpers';
+import { 
+    getMetricMetaInfo,
+    timeToString,
+    getDailyReminderValue,
+    clearLocalNotification,
+    setLocalNofication
+} from '../utils/helpers';
 import UdaciSlider from './UdaciSlider';
 import UdaciSteppers from './UdaciSteppers';
 import DateHeader from './DateHeader';
@@ -88,6 +94,7 @@ class AddEntry extends Component {
         submitEntry({ key, entry });
 
         // clear local notification
+        clearLocalNotification().then(setLocalNofication);
     }
 
     reset = () => {
