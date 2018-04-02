@@ -11,7 +11,7 @@ import {
     timeToString,
     getDailyReminderValue,
     clearLocalNotification,
-    setLocalNofication
+    setLocalNotification
 } from '../utils/helpers';
 import UdaciSlider from './UdaciSlider';
 import UdaciSteppers from './UdaciSteppers';
@@ -94,7 +94,7 @@ class AddEntry extends Component {
         submitEntry({ key, entry });
 
         // clear local notification
-        clearLocalNotification().then(setLocalNofication);
+        clearLocalNotification().then(setLocalNotification);
     }
 
     reset = () => {
